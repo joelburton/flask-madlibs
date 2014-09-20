@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 AWESOMENESS = [
     'awesome', 'terrific', 'fantastic', 'neato', 'fantabulous', 'wowza', 'oh-so-not-meh',
-    'brilliant', 'ducky', 'coolio', 'fantastic', 'wonderful', 'smashing', 'lovely',
+    'brilliant', 'ducky', 'coolio', 'incredible', 'wonderful', 'smashing', 'lovely',
 ]
 
 
