@@ -2,8 +2,12 @@ from random import choice, sample
 from flask import Flask, render_template, request
 
 
+# "__name__" is a special Python variable for the name of the current module; Flask wants
+# to know this to know what any imported things are relative to.
 app = Flask(__name__)
 
+# List of complimentary terms. Note that variable names in ALL CAPS are almost always
+# constants; things that aren't changed during the program run, like this one.
 AWESOMENESS = [
     'awesome', 'terrific', 'fantastic', 'neato', 'fantabulous', 'wowza', 'oh-so-not-meh',
     'brilliant', 'ducky', 'coolio', 'incredible', 'wonderful', 'smashing', 'lovely',
@@ -17,7 +21,7 @@ def say_hello():
 
 @app.route('/compliment')
 def say_something_nice():
-    """Return a complimentary sentence, choosign a random adjective."""
+    """Return a complimentary sentence, choosing a random adjective."""
 
     return "You look %s" % choice(AWESOMENESS)
 
@@ -39,7 +43,7 @@ def show_results():
     adjective = request.args.get('adjective')
     color = request.args.get('color')
 
-    if not noun or not adjective or not color:
+    if not person or not noun or not adjective or not color:
         return "Please answer all questions!"
 
     # did they check the box for wanting compliments?

@@ -14,6 +14,7 @@
   <div>
     Person
     <select name="person">
+      <option value="">--- Choose ---</option>
       <option value="Joel">Joel</option>
       <option value="Nick">Nick</option>
       <option value="Katie">Katie</option>
@@ -52,11 +53,11 @@
 
 <script>
   // When the user clicks the get-with-ajax button, call this function
-  $("#get-with-ajax").on("click", function (e) {
+  $("#get-with-ajax").on("click", function (event) {
 
     // Make the URL for our AJAX request: this will be /result? follow by our form parameters
     // We'll use the jQuery .serialize() method on our form object.
-    var url = "/result?" + $("#madlib-form").serialize()
+    var url = "/result?" + $("#madlib-form").serialize();
 
     // Print our URL to the JS console for debugging
     console.log(url);
