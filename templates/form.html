@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+  <title>MadLibs</title>
+  <script src="/static/jquery.js"></script>
+  <link rel="stylesheet" href="/static/madlibs.css">
+</head>
+<body>
+
+<h1>MadLibs</h1>
+
+<form id="madlib-form" action="/result">
+
+  <div>
+    Person
+    <select name="person">
+      <option value="Joel">Joel</option>
+      <option value="Nick">Nick</option>
+      <option value="Katie">Katie</option>
+      <option value="Cynthia">Cynthia</option>
+      <option value="Christian">Christian</option>
+    </select>
+  </div>
+
+  <div>
+    Noun
+    <input type="text" name="noun">
+  </div>
+
+  <div>
+    Color
+    <input type="text" name="color">
+  </div>
+
+  <div>
+    Adjective
+    <input type="text" name="adjective">
+  </div>
+
+  <div>
+    <input type="checkbox" name="wants_compliments">
+    Yes, I want compliments
+  </div>
+
+  <button type="submit">Get MadLib</button>
+  <button type="button" id="get-with-ajax">Get via AJAX</button>
+
+</form>
+
+<div id="madlib-result"></div>
+
+
+<script>
+  // When the user clicks the get-with-ajax button, call this function
+  $("#get-with-ajax").on("click", function (e) {
+
+    // Make the URL for our AJAX request: this will be /result? follow by our form parameters
+    // We'll use the jQuery .serialize() method on our form object.
+    var url = "/result?" + $("#madlib-form").serialize()
+
+    // Print our URL to the JS console for debugging
+    console.log(url);
+
+    // Replace everything at #madlib-result with the result of our AJAX call
+    $("#madlib-result").load(url);
+  })
+</script>
+
+</body>
+</html>
