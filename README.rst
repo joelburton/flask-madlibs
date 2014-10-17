@@ -46,7 +46,7 @@ Testing the Application
 
    This URL is "routed" to the function ``say_hello()`` and should return "Hello!"
 
-2. Visit http://localhost:5000/compliments
+2. Visit http://localhost:5000/compliment
 
    This is routed to ``say_something_nice()`` and will return a random compliment.
 
