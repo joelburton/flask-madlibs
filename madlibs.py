@@ -1,4 +1,4 @@
-from random import choice, sample
+from random import choice
 from flask import Flask, render_template, request
 
 
@@ -9,7 +9,7 @@ app = Flask(__name__)
 # route to handle the landing page of a website.
 @app.route('/')
 def start_here():
-    return "Hello!"
+    return "Hi! This is the home page."
 
 # route to display a simple web page
 @app.route('/hello')
@@ -20,14 +20,13 @@ def say_hello():
 def greet_person():
     player = request.args.get("person")
 
-    awesomeness = [
+    AWESOMENESS = [
         'awesome', 'terrific', 'fantastic', 'neato', 'fantabulous', 'wowza', 'oh-so-not-meh',
         'brilliant', 'ducky', 'coolio', 'incredible', 'wonderful', 'smashing', 'lovely']
 
-    compliment = choice(awesomeness)
+    compliment = choice(AWESOMENESS)
 
     return render_template("compliment.html", person=player, compliment=compliment)
-
 
 
 if __name__ == '__main__':

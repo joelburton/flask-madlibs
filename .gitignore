@@ -1,1 +1,5 @@
+# Never store the virtual environment in git
 /env
+
+# Don't store .pyc files
+*.pyc
