@@ -61,7 +61,7 @@ Testing the Application
 3. Submit the form. This will send you to http://localhost:5000/greet?person={your name here}
 
    This URL, "/greet", is routed to ``greet_person()``. This page is getting the
-   name entered in the previous form via ``request.args.get(person)``, choosing a
+   name entered in the previous form via ``request.args.get('person')``, choosing a
    random compliment, and passing both the person variable and the compliment
    to the function that renders the template at ``templates/compliment.html``.
    Reload this page a few times.
