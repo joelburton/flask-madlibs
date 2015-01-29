@@ -60,7 +60,9 @@ Testing the Application
    This URL, "/greet", is routed to ``greet_person()``. This page is getting the
    name entered in the previous form via ``reqeust.args.get(person)``, choosing a
    random compliment, and passing both the person variable and the compliment
-   to the HTML file ``templates/compliment.html``.
+   to the HTML file ``templates/compliment.html``. Reload this page a few times.
+   Change the text after the ``person=`` in the URL and hit return. Notice how the
+   page changes.
 
 Your Task
 ---------
