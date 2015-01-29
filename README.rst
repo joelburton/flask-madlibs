@@ -15,7 +15,7 @@ Setup
 -----
 
 1. In your project directory, create a "virtual environment" so we don't have
-to install Flask (or other special libraries) system-wide::
+   to install Flask (or other special libraries) system-wide::
 
      virtualenv env
 
@@ -103,14 +103,14 @@ Extra Credit: Harder
 --------------------
 
 1. Change ``game.html`` to have more inputs. Try to use as many different input types
-as you can. Change your ``show_madlib()`` function and ``madlib.html`` template to show
-the new fields in the story.
+   as you can. Change your ``show_madlib()`` function and ``madlib.html`` template to show
+   the new fields in the story.
 
 2. Add some style to your pages. You can use the empty file in ``static/madlibs.css``
-if you'd like.
+   if you'd like.
 
 3. Make a bunch of other Madlib templates and change ``show_madlib()`` to randomly
-choose which one to render.
+   choose which one to render.
 
 **STOP. If you get here, please ask for a code review.**
 
@@ -118,14 +118,14 @@ Extra Credit: Even Harder
 -------------------------
 
 4. Change the type of request for ``game.html`` submission to ``method="POST"``.
-What other changes in your
-code are needed to make that work? Can you make the same route handle both GET
-and POST? And do something slightly different with each type of request?
+   What other changes in your
+   code are needed to make that work? Can you make the same route handle both GET
+   and POST? And do something slightly different with each type of request?
 
 5. Modify ``greet_person()`` to pass a list of 3 compliments to ``compliment.html``.
-Modify ``compliment.html`` to display that list using a jinja for loop. Try putting
-that list of compliments in an unordered list. (Hint: there's a very useful function
-in Python's ``random`` module for "make several random selections from a list").
+   Modify ``compliment.html`` to display that list using a jinja for loop. Try putting
+   that list of compliments in an unordered list. (Hint: there's a very useful function
+   in Python's ``random`` module for "make several random selections from a list").
 
 **STOP. If you get here, please ask for a code review.**
 
@@ -133,8 +133,8 @@ Extra Credit: Harder Still
 --------------------------
 
 6. We don't want people to be able to submit a MadLib until they've filled out each
-field on their form. Using jQuery, check when they submit a form if they've put something
-into each of the form fields and, if not, present an error message with ``alert()``
-and don't submit the form.
+   field on their form. Using jQuery, check when they submit a form if they've put something
+   into each of the form fields and, if not, present an error message with ``alert()``
+   and don't submit the form.
 
 **STOP. If you get here, please ask for a code review.**
