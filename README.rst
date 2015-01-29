@@ -109,7 +109,7 @@ the new fields in the story.
 2. Add some style to your pages. You can use the empty file in ``static/madlibs.css``
 if you'd like.
 
-3. Make a bunch of other Madlib templates and change ``/madlib`` to randomly
+3. Make a bunch of other Madlib templates and change ``show_madlib()`` to randomly
 choose which one to render.
 
 **STOP. If you get here, please ask for a code review.**
@@ -117,13 +117,15 @@ choose which one to render.
 Extra Credit: Even Harder
 -------------------------
 
-4. Change the type of request to a ``method="POST"``. What other changes in your
+4. Change the type of request for ``game.html`` submission to ``method="POST"``.
+What other changes in your
 code are needed to make that work? Can you make the same route handle both GET
 and POST? And do something slightly different with each type of request?
 
-5. Modify ``greet_person()`` to pass a list of compliments to ``compliment.html``.
+5. Modify ``greet_person()`` to pass a list of 3 compliments to ``compliment.html``.
 Modify ``compliment.html`` to display that list using a jinja for loop. Try putting
-that list of compliments in an unordered list.
+that list of compliments in an unordered list. (Hint: there's a very useful function
+in Python's ``random`` module for "make several random selections from a list").
 
 **STOP. If you get here, please ask for a code review.**
 
